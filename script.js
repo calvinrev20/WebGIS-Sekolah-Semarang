@@ -85,7 +85,7 @@ function displayTableData() {
       </td>
       <td class="px-4 py-2 border-b border-gray-200 text-center">${school.distance} km</td>
       <td class="px-4 py-2 border-b border-gray-200 text-center">
-        <img src="${school.img}" alt="${school.name}" class="w-48 h-36 rounded-md object-cover">
+        <img src="${school.img}" alt="${school.name}" class="w-16 h-12 rounded-md object-cover">
       </td>
     `;
 
