@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>WEB GIS Sekolah</title>
+  </head>
+  <body class="bg-gray-100 font-sans text-gray-700">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 shadow-lg">
+      <div class="container mx-auto">
+        <h1 class="text-2xl font-bold text-center">WEB GIS Sekolah</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-6">
+      <!-- Search Box -->
+      <div class="flex justify-between items-center mb-4">
+        <input
+          type="text"
+          id="search"
+          placeholder="Cari Sekolah..."
+          class="w-full md:w-1/2 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500"
+          onkeyup="searchFunction()"
+        />
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+        <table class="table-auto min-w-full border border-gray-200">
+          <thead class="bg-blue-50">
+            <tr>
+              <th
+                class="px-4 py-2 border-b text-left text-gray-700 font-medium"
+              >
+                No
+              </th>
+              <th
+                class="px-4 py-2 border-b text-left text-gray-700 font-medium"
+              >
+                Nama Sekolah
+              </th>
+              <th
+                class="px-4 py-2 border-b text-left text-gray-700 font-medium"
+              >
+                Link Map
+              </th>
+              <th
+                class="px-4 py-2 border-b text-left text-gray-700 font-medium"
+              >
+                Jarak (km)
+              </th>
+              <th
+                class="px-4 py-2 border-b text-left text-gray-700 font-medium"
+              >
+                Foto
+              </th>
+            </tr>
+          </thead>
+          <tbody id="schoolTable" class="text-sm">
+            <!-- Data Sekolah akan diisi melalui JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-between items-center mt-4">
+        <span id="entriesInfo" class="text-gray-600 text-sm"></span>
+        <div class="space-x-2">
+          <button
+            onclick="prevPage()"
+            id="prevButton"
+            class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+          >
+            Previous
+          </button>
+          <button
+            onclick="nextPage()"
+            id="nextButton"
+            class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-200 mt-8 py-6">
+      <div
+        class="container mx-auto grid md:grid-cols-3 gap-6 text-center md:text-left"
+      >
+        <!-- Link Terkait -->
+        <div>
+          <h3 class="font-semibold text-lg mb-2">Link Terkait</h3>
+          <ul class="space-y-1">
+            <li>
+              <a
+                href="https://semarangkota.go.id"
+                target="_blank"
+                class="hover:text-blue-400"
+                >semarang.go.id</a
+              >
+            </li>
+            <li>
+              <a href="tel:112" class="hover:text-blue-400">Call Center 112</a>
+            </li>
+            <li>
+              <a
+                href="https://sapambaita.semarangkota.go.id"
+                target="_blank"
+                class="hover:text-blue-400"
+                >Sapa Mba Ita</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Kontak Kami -->
+        <div>
+          <h3 class="font-semibold text-lg mb-2">Kontak Kami</h3>
+          <p>08100000000</p>
+          <p>
+            <a href="mailto:infosekolah@gmail.com" class="hover:text-blue-400"
+              >infosekolah@gmail.com</a
+            >
+          </p>
+          <p>Jl.Pemuda No.148, Kota Semarang</p>
+        </div>
+        <!-- Maps -->
+        <div>
+          <h3 class="font-semibold text-lg mb-2">Maps</h3>
+          <iframe
+            src="https://maps.google.com/maps?q=Jl.%20Pemuda%20No.148,%20Kota%20Semarang&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            class="w-full h-32 rounded-md"
+            style="border: 0"
+          ></iframe>
+        </div>
+      </div>
+      <div class="text-center mt-6 text-sm">
+        Copyright 2024 All Rights Reserved by Vinrev
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
