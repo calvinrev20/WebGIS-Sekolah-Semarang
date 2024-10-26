@@ -1,7 +1,7 @@
 let schools = [];
 let filteredData = [];
 let currentPage = 1;
-const entriesPerPage = 10;
+const entriesPerPage = 20;
 
 // Fungsi Haversine untuk menghitung jarak antara dua titik koordinat
 function calculateDistance(lat1, lon1, lat2, lon2) {
